@@ -1,0 +1,71 @@
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    height: 60px;
+    padding: 25px;
+  }
+  
+  /* Style the header links */
+  .header P {
+    /* float: left; */
+    color: black;
+    text-align: center;
+    /* padding: 10px; */
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 10px;
+    border-radius: 4px;
+  }
+  
+  .waiting {
+      float: left;
+      padding-left: 70px;
+  }
+
+  .complete {
+      float: center;
+      
+  }
+
+  .total {
+      float: right;
+      padding-right: 70px;
+
+  }
+
+
+  .number {
+      color: red;
+      font-size: 36px;
+    
+
+  }
+
+  .fa-ellipsis-v {
+      color: silver;
+      
+      padding-left: 130px;
+
+
+  }
+  
+  .fa-circle {
+
+      
+      color: red;
+  }
+
+  .edit {
+      padding: 5px;
+  }
+
+  .status {
+      color: green;
+  }
+
+
+/* 
+  .header-right {
+    float: right;
+  } */
+  

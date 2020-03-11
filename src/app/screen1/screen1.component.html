@@ -1,0 +1,34 @@
+<app-nav></app-nav>
+<div class="header">
+  
+  <div class="header-right">
+    <p class="waiting">Waiting {{waiting}}</p>
+    <p class="total">Total {{waiting + complete}}</p>
+    <p class="complete">Complete {{complete}}</p>
+    
+  </div>
+</div>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of employee[0]">
+     
+        <td [routerLink]="['/screen2/', item.other.pid]" class="number" scope="row">{{item.tokenName}}</td>
+        <td [routerLink]="['/screen2/', item.other.pid]">{{item.name}}<br>ECG</td>
+        <td [routerLink]="['/screen2/', item.other.pid]" *ngIf="item.objectId"><i class="fa fa-ellipsis-v fa-3x" aria-hidden="true"></i><br>{{item.timestamp | date:'MMM d, h:mm a'}}
+         <i *ngIf="!item.status; else elseBlock" class="fa fa-circle fa-2x" aria-hidden="true"></i>
+         <ng-template #elseBlock><i class="fa fa-circle fa-2x status" aria-hidden="true"></i></ng-template>
+      </td>
+    
+    </tr>
+  </tbody>
+</table>
+

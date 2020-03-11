@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+<div class="main">
+<div  class="image">
+  <img *ngIf="employee.person_pic; else elseBlock" [src]="employee.person_pic" alt="Person pic">
+  <ng-template #elseBlock>
+    <img src="../../assets/download.jfif">
+  </ng-template>
+  <i class="fa fa-camera fa-2x" aria-hidden="true"></i>
+</div>
+
+<div class="content">
+  <p>PID<span class="tab">{{employee._pk}}</span></p>
+  <p>Name<span class="tab">{{employee.person_full_name}}</span></p>
+  <p>Gender<span class="tab">{{employee.person_gender}}</span></p>
+  <p>Age<span class="tab">{{employee.person_age}}</span></p>
+  <p>DoB<span class="tab">----</span></p>
+  <p>Phone<span class="tab">{{employee.person_phone}}</span></p>
+  <p>Email<span class="tab">----</span></p>
+</div>
+
+
+<a routerLink="" class="btn btn-primary">Back</a>
+
+</div>
