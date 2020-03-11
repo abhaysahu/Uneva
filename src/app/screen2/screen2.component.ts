@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Screen2Component implements OnInit {
 
-  employee = {}
+  employee = []
+  
 
   public id: string;
   
@@ -20,7 +21,7 @@ export class Screen2Component implements OnInit {
     console.log(this.id)
 
     this.userService.getpatient(this.id).then(data => {
-      this.employee = data
+      this.employee.push(data)
       
       console.log(this.employee)
     })
